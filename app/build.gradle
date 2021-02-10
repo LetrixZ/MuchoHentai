@@ -63,7 +63,6 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0-rc01'
 
     //Navigation Library
-    def nav_version = "2.3.3"
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.3"
 
     // Retrofit
@@ -78,10 +77,9 @@ dependencies {
     def exoplayer = "2.12.1"
     implementation "com.google.android.exoplayer:exoplayer-core:$exoplayer"
     implementation "com.google.android.exoplayer:exoplayer-ui:$exoplayer"
-    implementation "com.google.android.exoplayer:extension-mediasession:$exoplayer"
+    /*implementation "com.google.android.exoplayer:extension-mediasession:$exoplayer"*/
     implementation "com.google.android.exoplayer:exoplayer-hls:$exoplayer"
     implementation "com.google.android.exoplayer:extension-ima:$exoplayer"
-
 
     // Hilt
     def hilt_version = "2.28-alpha"
@@ -90,10 +88,6 @@ dependencies {
     def hilt_viewmodels = "1.0.0-alpha02"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodels"
     kapt "androidx.hilt:hilt-compiler:$hilt_viewmodels"
-
-    // Sliding panel
-    def sliding_panel = "4.2.1"
-    implementation "com.github.hannesa2:AndroidSlidingUpPanel:$sliding_panel"
 
     def room = "2.2.6"
     implementation "androidx.room:room-runtime:$room"

@@ -11,7 +11,6 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.google.android.exoplayer2.*
 import com.google.android.exoplayer2.audio.AudioAttributes
-import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector
 import com.google.android.exoplayer2.source.TrackGroupArray
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
@@ -31,7 +30,6 @@ class PlayerFragmentBak : Fragment(R.layout.fragment_player) {
 
     private lateinit var player: SimpleExoPlayer
     private lateinit var mediaSession: MediaSessionCompat
-    private lateinit var mediaSessionConnector: MediaSessionConnector
     private lateinit var playerNotificationManager: PlayerNotificationManager
 
     private lateinit var mainActivity: MainActivity
@@ -152,7 +150,7 @@ class PlayerFragmentBak : Fragment(R.layout.fragment_player) {
         player.release()
         playerNotificationManager.setPlayer(null)
         mediaSession.release()
-        mediaSessionConnector.setPlayer(null)
+//        mediaSessionConnector.setPlayer(null)
     }
 
     override fun onDestroyView() {

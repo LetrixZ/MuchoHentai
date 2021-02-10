@@ -5,8 +5,6 @@ import android.support.v4.media.MediaDescriptionCompat
 import android.support.v4.media.session.MediaSessionCompat
 import androidx.core.app.NotificationCompat
 import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector
-import com.google.android.exoplayer2.ext.mediasession.TimelineQueueNavigator
 import com.google.android.exoplayer2.ui.PlayerNotificationManager
 import com.letrix.muchohentai.app.R
 
@@ -19,12 +17,12 @@ object PlayerUtil {
         }
     }
 
-    fun getMediaSessionConnector(
+    /*fun getMediaSessionConnector(
         playlist: String,
         mediaSession: MediaSessionCompat
     ): MediaSessionConnector {
         return MediaSessionConnector(mediaSession).apply {
-            /*val queueNavigator = object : TimelineQueueNavigator(mediaSession) {
+            *//*val queueNavigator = object : TimelineQueueNavigator(mediaSession) {
                 override fun getMediaDescription(
                     player: Player,
                     windowIndex: Int,
@@ -36,9 +34,9 @@ object PlayerUtil {
                     }.build()
                 }
             }
-            setQueueNavigator(queueNavigator)*/
+            setQueueNavigator(queueNavigator)*//*
         }
-    }
+    }*/
 
     fun getPlayerNotificationManager(
         playlist: String,
