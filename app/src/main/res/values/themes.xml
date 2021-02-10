@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MuchoHentai" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red_500</item>
+        <item name="colorPrimaryVariant">@color/dark_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_500</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/light_white</item>
+        <item name="colorOnSurface">@color/dark_500</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorSecondary">#505050</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Corner.Default" parent="">
+        <item name="cornerSize">4dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="SmallCover">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_width">@dimen/small_image_width</item>
+        <item name="android:layout_height">@dimen/small_image_height</item>
+    </style>
+
+    <style name="MediumCover">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_width">@dimen/medium_image_width</item>
+        <item name="android:layout_height">@dimen/medium_image_height</item>
+    </style>
+
+    <style name="LargeCover">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_width">@dimen/large_image_width</item>
+        <item name="android:layout_height">@dimen/large_image_height</item>
+    </style>
+
+    <style name="ExtraCover">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_width">@dimen/extra_image_width</item>
+        <item name="android:layout_height">@dimen/extra_image_height</item>
+    </style>
+</resources>

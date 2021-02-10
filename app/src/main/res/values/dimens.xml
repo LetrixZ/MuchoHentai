@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="small_image_width" format="dimension" type="dimen">110dp</item>
+    <item name="small_image_height" format="dimension" type="dimen">155dp</item>
+    <item name="medium_image_width" format="dimension" type="dimen">115dp</item>
+    <item name="medium_image_height" format="dimension" type="dimen">162dp</item>
+    <item name="large_image_width" format="dimension" type="dimen">130dp</item>
+    <item name="large_image_height" format="dimension" type="dimen">180dp</item>
+    <item name="extra_image_width" format="dimension" type="dimen">170dp</item>
+    <item name="extra_image_height" format="dimension" type="dimen">235dp</item>
+    <dimen name="exo_button_size">36dp</dimen>
+</resources>

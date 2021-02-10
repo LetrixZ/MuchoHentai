@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:paddingHorizontal="8dp">
+
+    <ImageView
+        android:id="@+id/back_button"
+        style="@style/ButtonStyle"
+        android:src="@drawable/ic_back" />
+
+    <EditText
+        android:id="@+id/edit_box"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@id/back_button"
+        android:background="@drawable/background_edit_text"
+        android:clickable="true"
+        android:elevation="1dp"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:hint="@string/search"
+        android:textColorHint="@color/light_black"
+        android:imeOptions="actionSearch"
+        android:inputType="textCapWords"
+        android:paddingHorizontal="12dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        tools:text="Boku no Hero" />
+
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/back_button"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:textSize="20sp"
+        android:visibility="gone"
+        tools:text="Your Playlist" />
+
+</RelativeLayout>

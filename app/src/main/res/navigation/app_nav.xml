@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/contentListFragment"
+        android:name="com.letrix.muchohentai.app.ui.contentlist.ContentListFragment"
+        android:label="ContentList">
+        <action
+            android:id="@+id/to_search"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_right_2"
+            app:popExitAnim="@anim/slide_out_right_2" />
+        <action
+            android:id="@+id/action_contentListFragment_to_playerFragment"
+            app:destination="@id/playerFragment"
+            app:enterAnim="@anim/slide_in_right_2"
+            app:popExitAnim="@anim/slide_out_right_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.letrix.muchohentai.app.ui.splash.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_content_list"
+            app:destination="@id/contentListFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.letrix.muchohentai.app.ui.search.SearchFragment"
+        android:label="SearchFragment">
+        <action
+            android:id="@+id/action_searchFragment_to_playerFragment"
+            app:destination="@id/playerFragment"
+            app:enterAnim="@anim/slide_in_right_2"
+            app:popExitAnim="@anim/slide_out_right_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.letrix.muchohentai.app.ui.player.PlayerFragment"
+        android:label="PlayerFragment" >
+        <argument
+            android:name="post"
+            app:argType="com.letrix.muchohentai.app.domain.Post" />
+    </fragment>
+</navigation>

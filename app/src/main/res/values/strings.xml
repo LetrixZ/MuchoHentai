@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Mucho Hentai</string>
+    <string name="by_artist">by %s</string>
+    <string name="episode">Episodes %s</string>
+    <string name="play_all">Play all</string>
+    <string name="browse">Browse</string>
+    <string name="no_results">No results</string>
+    <string name="search">Search...</string>
+    <string name="load_error">Results could not be loaded</string>
+    <string name="retry">Retry</string>
+    <plurals name="episode">
+        <item quantity="one">Episode %s</item>
+        <item quantity="other">Episodes %s</item>
+    </plurals>
+</resources>
