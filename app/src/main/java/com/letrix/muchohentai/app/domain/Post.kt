@@ -3,22 +3,29 @@ package com.letrix.muchohentai.app.domain
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlin.collections.List as CollectionsList
 
 data class Post(
-    val postId: Int,
+    @SerializedName("id") val postId: Int,
     val series: String,
-    val seriesId: String,
+    @SerializedName("series_id") val seriesId: String,
     val episode: Int?,
     val type: String,
     val uncensored: Boolean,
     val views: Int,
     val thumbnail: String,
-    val audioLanguage: String,
-    val subtitleLanguage: String,
+    @SerializedName("audio") val audioLanguage: String,
+    @SerializedName("subtitles") val subtitleLanguage: String,
     val cover: String?,
-    val tags: List<String>,
-    val postUrl: String
+    val tags: CollectionsList<String>,
+    @SerializedName("url") val postUrl: String
 ) : Parcelable {
+
+    data class List(
+        val title: String,
+        val list: CollectionsList<Post>
+    )
+
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,

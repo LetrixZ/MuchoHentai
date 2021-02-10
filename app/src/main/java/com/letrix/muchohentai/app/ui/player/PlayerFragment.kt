@@ -99,13 +99,13 @@ class PlayerFragment : Fragment(R.layout.fragment_player) {
         )
         httpDataSourceFactory.defaultRequestProperties["Referer"] = "https://muchohentai.com/"
 
-        val imaAdsLoader = ImaAdsLoader.Builder(requireActivity()).setAdEventListener {
+        /*val imaAdsLoader = ImaAdsLoader.Builder(requireActivity()).setAdEventListener {
             AdEvent.AdEventListener { p0 -> Timber.d(p0.toString()) }
-        }.setPlayAdBeforeStartPosition(true).build()
+        }.setPlayAdBeforeStartPosition(true).build()*/
         val dataSourceFactory: DataSource.Factory =
             DefaultDataSourceFactory(requireActivity(), null, httpDataSourceFactory)
         val mediaSourceFactory = DefaultMediaSourceFactory(dataSourceFactory)
-            .setAdsLoaderProvider(object : AdsLoader, DefaultMediaSourceFactory.AdsLoaderProvider {
+            /*.setAdsLoaderProvider(object : AdsLoader, DefaultMediaSourceFactory.AdsLoaderProvider {
                 override fun contentComplete() {
 
                 }
@@ -142,7 +142,7 @@ class PlayerFragment : Fragment(R.layout.fragment_player) {
                     return imaAdsLoader
                 }
             })
-            .setAdViewProvider(binding.playerView)
+            .setAdViewProvider(binding.playerView)*/
         player =
             SimpleExoPlayer.Builder(requireActivity()).setAudioAttributes(audioAttributes, true)
                 .setTrackSelector(trackSelector)
@@ -199,7 +199,7 @@ class PlayerFragment : Fragment(R.layout.fragment_player) {
             )
         }
 
-        imaAdsLoader.setPlayer(player)
+        /*imaAdsLoader.setPlayer(player)*/
 
         player.prepare()
         player.seekTo(0, C.TIME_UNSET)

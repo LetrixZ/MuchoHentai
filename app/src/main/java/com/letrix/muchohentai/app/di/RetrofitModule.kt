@@ -18,8 +18,8 @@ import javax.inject.Singleton
 @InstallIn(ApplicationComponent::class)
 object RetrofitModule {
 
-    private val prodUrl: String = "https://muchohentai-api.herokuapp.com/"
-    private val devUrl: String = "http://192.168.1.40:5000/"
+    private const val prodUrl: String = "https://muchohentai-api.vercel.app/"
+    private const val devUrl: String = "http://192.168.1.40:5000/"
 
     @Singleton
     @Provides
@@ -27,7 +27,7 @@ object RetrofitModule {
         val client = OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS).build()
         return Retrofit.Builder()
-            .baseUrl(devUrl)
+            .baseUrl(prodUrl)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
             .build()

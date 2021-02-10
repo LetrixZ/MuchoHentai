@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.letrix.muchohentai.app.domain.Content
+import com.letrix.muchohentai.app.domain.Post
 import com.letrix.muchohentai.app.network.ApiRepository
 import com.letrix.muchohentai.app.util.DataState
 import kotlinx.coroutines.flow.launchIn
@@ -18,7 +18,7 @@ constructor(
     private val repository: ApiRepository
 ) : ViewModel() {
 
-    lateinit var contentList : Content
+    lateinit var contentList: List<Post.List>
 
     private val _dataState: MutableLiveData<DataState<Any>> = MutableLiveData()
 

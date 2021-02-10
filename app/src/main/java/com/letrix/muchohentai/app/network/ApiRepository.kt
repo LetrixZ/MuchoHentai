@@ -3,8 +3,8 @@ package com.letrix.muchohentai.app.network
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.liveData
-import com.letrix.muchohentai.app.domain.Content
 import com.letrix.muchohentai.app.domain.Episode
+import com.letrix.muchohentai.app.domain.Post
 import com.letrix.muchohentai.app.network.mapper.ContentMapper
 import com.letrix.muchohentai.app.network.mapper.EpisodeMapper
 import com.letrix.muchohentai.app.network.mapper.PostMapper
@@ -22,12 +22,11 @@ class ApiRepository @Inject constructor(
     private val postMapper: PostMapper
 ) {
 
-    fun recent(): Flow<DataState<Content>> = flow {
+    fun recent(): Flow<DataState<List<Post.List>>> = flow {
         emit(DataState.Loading)
         try {
             val entity = apiService.latest()
-            val domain = contentMapper.mapToDomain(entity)
-            emit(DataState.Success(domain))
+            emit(DataState.Success(entity))
         } catch (e: Exception) {
             emit(DataState.Error(e))
         }
